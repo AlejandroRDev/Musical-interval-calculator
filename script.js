@@ -1,3 +1,6 @@
+let operA;
+let operB;
+
 //Nodos
 
 let result$$ = document.getElementById('result');
@@ -79,4 +82,42 @@ sepM$$.onclick = () => {
 oct$$.onclick = () => {
     result$$.innerHTML = `6`;
 };
+sum$$.onclick = () => {
+    operA = result$$.textContent;
+    console.log(operA);
+}
+reset$$.onclick = () => {
+    result$$.innerHTML = ``;
+}
+chord$$.onclick = () =>{
+    operB = result$$.textContent;
+    console.log(operB);
+    resolve();
 
+}
+
+const resolve =  () => {
+    let tones = 0;
+    tones = parseFloat(operA) + parseFloat(operB);
+    console.log(tones);
+    const div$$ =  document.createElement('div');
+    const p$$ =  document.createElement('p');
+    if (tones === 5) {
+        result$$.innerHTML = tones;
+        p$$.innerHTML = `Es una triada menor, tiene 5 tonos.`;
+    } else if (tones === 5.5) {
+        result$$.innerHTML = tones;
+        p$$.innerHTML = `Es una triada mayor, tiene 5 tonos y 1 semitono.`
+    } else if (tones === 4.5) {
+        result$$.innerHTML = tones;
+        p$$.innerHTML = `Es una triada disminuida, tiene 4 tonos y 1 semitono.`;
+    } else if (tones === 6) {
+        result$$.innerHTML = tones;
+        p$$.innerHTML = `Es una triada aumentada, tiene 6 tonos.`
+    } else {
+        result$$.innerHTML = ``;
+        p$$.innerHTML = `Quieto! quieto Schopenhauer!, esta calculadora solo muestra las triadas fundamentales.`;
+    }
+    div$$.appendChild(p$$);
+    document.body.appendChild(div$$);
+}
