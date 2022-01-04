@@ -102,6 +102,7 @@ const resolve =  () => {
     console.log(tones);
     const div$$ =  document.createElement('div');
     const p$$ =  document.createElement('p');
+    p$$.innerHTML =  ``;
     if (tones === 5) {
         result$$.innerHTML = tones;
         p$$.innerHTML = `Es una triada menor, tiene 5 tonos.`;

@@ -4,69 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="calculadora-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/logo-nav.png" type="image/x-icon">
+    <script src="calculadora-script.js" defer></script>
     <title>Musical interval calculator</title>
   </head>
   <body>
     <header>
-        <nav id = "navbar">
-            <ul id ="navlist">
-                <li>logo</li>
-                <li><a href="./inicio.html">Inicio</a></li>
-                <li><a href="./teoria-musical.html">Teoría músical</a></li>
-                <li><a href="./calculadora.html">Caculadora musical</a></li>
-                <li><a href="./lecciones.html">Lecciones</a></li>
-            </ul>
-        </nav>
+      <nav id="navbar">
+        <ul id="navlist">
+          <li><img id='nav-img' src="./images/logo-title.png" alt="Inicio de pentagrama" /></li>
+          <li><a href="./inicio.html">Inicio</a></li>
+          <li><a href="./teoria-musical.html">Teoría músical</a></li>
+          <li><a href="./calculadora.html">Caculadora musical</a></li>
+          <li><a href="./lecciones.html">Lecciones</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <table id='Calculadora'>
-            <thead>
-                <tr>
-                    <td colspan="3"><span id="result"></span></td> 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><button id="segm">2ªm</button></td>
-                    <td><button id="segM">2ªM</button></td>
-                    <td><button id="segA">2ªA</button></td>
-                </tr>
-                <tr>
-                    <td><button id="term">3ªm</button></td>
-                    <td><button id="terM">3ªM</button></td>
-                    <td><button id="cuad">4ªd</button></td>
-                </tr>
-                <tr>
-                    <td><button id="cuaJ">4ªJ</button></td>
-                    <td><button id="cuaA">4ªA</button></td>
-                    <td><button id="quid">5ªd</button></td>
-                </tr>
-                <tr>
-                    <td><button id="quiJ">5ªJ</button></td>
-                    <td><button id="quiA">5ªA</button></td>
-                    <td><button id="sexm">6ªm</button></td>
-                </tr>
-                <tr>
-                    <td><button id="sexM">6ªM</button></td>
-                    <td><button id="sexA">6ªA</button></td>
-                    <td><button id="sepd">7ªd</button></td>
-                </tr>
-                <tr>
-                    <td><button id="sepm">7ªm</button></td>
-                    <td><button id="sepM">7ªM</button></td>
-                    <td><button id="oct">8ª</button></td>
-                </tr>
-                <tr>
-                    <td><button id="sum">Sumar</button></td>
-                    <td><button id="chord">Acorde</button></td>
-                    <td><button id="reset">Reset</button></td>
-                </tr>
-                
-            </tbody>
-        </table>
-            
+      <table id="Calculadora">
+        <thead>
+          <tr>
+            <td colspan="3"><span id="result"></span></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><button id="segm">2ªm</button></td>
+            <td><button id="segM">2ªM</button></td>
+            <td><button id="segA">2ªA</button></td>
+          </tr>
+          <tr>
+            <td><button id="term">3ªm</button></td>
+            <td><button id="terM">3ªM</button></td>
+            <td><button id="cuad">4ªd</button></td>
+          </tr>
+          <tr>
+            <td><button id="cuaJ">4ªJ</button></td>
+            <td><button id="cuaA">4ªA</button></td>
+            <td><button id="quid">5ªd</button></td>
+          </tr>
+          <tr>
+            <td><button id="quiJ">5ªJ</button></td>
+            <td><button id="quiA">5ªA</button></td>
+            <td><button id="sexm">6ªm</button></td>
+          </tr>
+          <tr>
+            <td><button id="sexM">6ªM</button></td>
+            <td><button id="sexA">6ªA</button></td>
+            <td><button id="sepd">7ªd</button></td>
+          </tr>
+          <tr>
+            <td><button id="sepm">7ªm</button></td>
+            <td><button id="sepM">7ªM</button></td>
+            <td><button id="oct">8ª</button></td>
+          </tr>
+          <tr>
+            <td><button id="sum">Sumar</button></td>
+            <td><button id="chord">Acorde</button></td>
+            <td><button id="reset">Reset</button></td>
+          </tr>
+        </tbody>
+      </table>
     </main>
   </body>
 </html>
