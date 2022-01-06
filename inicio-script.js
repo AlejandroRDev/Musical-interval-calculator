@@ -17,7 +17,13 @@ const bocadilloArray3 = [
   "Dejemonos de tonterias, realmente si estoy aquí es por una razón",
   "¿Te has preguntado por qué han pixelado a Bach? </br> ¿y no a tu vecina, por ejemplo?",
   'La explicación es sencilla, por algo me consideran "el padre de la música"',
-  "Durante mi vida"
+  "Durante mi vida...",
+];
+const bocadilloArray4 = [
+  "Ejem... no se como tomarme eso...",
+  "No me enrollo más, ¡Vamós al grano!",
+  "Dentro de mi extensa obra, hay dos que cabe remarcar, por la influencia en el desarrollo de nuestra música.",
+  "Con mi propuesta, demostré que se podian escribir piezas musicales en las 24 tonalidades."
 ];
 
 btnStart$$.addEventListener("click", () => {
@@ -58,6 +64,7 @@ function writeBocadillo(param, array) {
       const btnBocadillo = document.createElement("button");
       btnBocadillo.addEventListener("click", writeBocadilloSecond);
       btnBocadillo.innerHTML = `>`;
+      btnBocadillo.setAttribute("class", "btnBocadillo");
       param.innerHTML = `
     <p class="textBocadillo">${array[2]}</p>
     `;
@@ -73,34 +80,6 @@ const writeBocadilloSecond = () => {
   for (let i = 0; i < bocadilloArray3.length; i++) {
     setTimeout(function () {
       divBocadillo$$.innerHTML = `
-    <p class="textBocadillo">${bocadilloArray3[0]}</p>`;
-    }, 500);
-    setTimeout(function () {
-      divBocadillo$$.innerHTML = `
-    <p class="textBocadillo">${bocadilloArray3[1]}</p>`;
-    }, 3500);
-    setTimeout(function () {
-      divBocadillo$$.innerHTML = `
-    <p class="textBocadillo">${bocadilloArray3[2]}</p>
-    `;
-    }, 6500);
-    setTimeout(function () {
-      const btnBocadillo2 = document.createElement('button');
-      btnBocadillo2.addEventListener("click", writeBocadilloThird);
-      btnBocadillo2.innerHTML = `>`;
-      divBocadillo$$.innerHTML = `
-      <p class="textBocadillo">${bocadilloArray3[3]}</p>
-      `;
-      divBocadillo$$.appendChild(btnBocadillo2);
-    }, 9500);
-    clearTimeout(divBocadillo$$);
-  }
-};
-
-const writeBocadilloThird = () => {
-  for (let i = 0; i < bocadilloArray2.length; i++) {
-    setTimeout(function () {
-      divBocadillo$$.innerHTML = `
     <p class="textBocadillo">${bocadilloArray2[0]}</p>`;
     }, 500);
     setTimeout(function () {
@@ -113,9 +92,10 @@ const writeBocadilloThird = () => {
     `;
     }, 6500);
     setTimeout(function () {
-      const btnBocadillo2 = document.createElement('button');
-      btnBocadillo2.addEventListener("click", );
+      const btnBocadillo2 = document.createElement("button");
+      btnBocadillo2.addEventListener("click", writeBocadilloThird);
       btnBocadillo2.innerHTML = `>`;
+      btnBocadillo2.setAttribute("class", "btnBocadillo");
       divBocadillo$$.innerHTML = `
       <p class="textBocadillo">${bocadilloArray2[3]}</p>
       `;
@@ -124,6 +104,69 @@ const writeBocadilloThird = () => {
     clearTimeout(divBocadillo$$);
   }
 };
+
+const writeBocadilloThird = () => {
+  for (let i = 0; i < bocadilloArray3.length; i++) {
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray3[0]}</p>`;
+    }, 500);
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray3[1]}</p>`;
+    }, 3500);
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray3[2]}</p>
+    `;
+    }, 6500);
+    setTimeout(function () {
+      const btnBocadillo2 = document.createElement("button");
+      btnBocadillo2.addEventListener("click", writeBocadilloFourth);
+      btnBocadillo2.innerHTML = `mucho texto`;
+      btnBocadillo2.setAttribute("class", "btnBocadillo");
+      divBocadillo$$.innerHTML = `
+      <p class="textBocadillo">${bocadilloArray3[3]}</p>
+      `;
+      divBocadillo$$.appendChild(btnBocadillo2);
+    }, 9500);
+    clearTimeout(divBocadillo$$);
+  }
+};
+
+const writeBocadilloFourth = () => {
+  for (let i = 0; i < bocadilloArray4.length; i++) {
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray4[0]}</p>`;
+    }, 500);
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray4[1]}</p>`;
+    }, 3500);
+    setTimeout(function () {
+      divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">${bocadilloArray4[2]}</p>
+    `;
+    }, 6500);
+    setTimeout(function () {
+      const btnBocadillo2 = document.createElement('button');
+      btnBocadillo2.addEventListener("click", writeDivObras);
+      btnBocadillo2.innerHTML = `>`;
+      btnBocadillo2.setAttribute('class', 'btnBocadillo');
+      divBocadillo$$.innerHTML = `
+      <p class="textBocadillo">${bocadilloArray4[3]}</p>
+      `;
+      divBocadillo$$.appendChild(btnBocadillo2);
+    }, 10500);
+    clearTimeout(divBocadillo$$);
+  }
+};
+
+const writeDivObras =  () => {
+  const divObras$$ = document.createElement('div');
+  
+}
 
 /* La propuesta de Bach es una demostración de cómo se podían escribir piezas musicales en las 24 tonalidades (12 mayores y 12 menores, una desde cada semitono). De esta manera, ordenó los Preludios y Fugas, por parejas,
  en cada una de las tonalidades, partiendo de Do mayor y finalizando en Si menor  */

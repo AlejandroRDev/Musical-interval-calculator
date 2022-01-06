@@ -8,14 +8,14 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     height: 80px;
     max-width: 100%;
     padding: 10px 40px;
-    border: 2px solid red;
+    background-color: #212529;
 }
 
 #nav-img {
@@ -23,14 +23,22 @@
     height: 90px;
     width: 100%;
     padding-left: 0px;
+    object-fit:contain;
+  background-color: #212529;
     
 }
 
 a { 
-    color: black;
+    background-color: #212529;
+  color: white;
     text-decoration: none;
 
 }
+
+li {
+    background-color: #212529;
+    
+  }
 
 main {
     max-width: 100%;
@@ -38,4 +46,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+button {
+  border-radius: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #212529;
+  color: white;
+  margin: 5px 10px;
+  
+}
+
+#calculadora {
+  border:  2px solid #212529;
+  background-color: #ADB5BD;
 }
