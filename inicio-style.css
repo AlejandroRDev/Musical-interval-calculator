@@ -48,30 +48,27 @@ main {
   align-items: flex-start;
   margin-left: 200px;
 }
-
 .bocadillo {
   position: relative;
   height: 150px;
   width: 300px;
   background: white;
-  border-radius: 50%;
   box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  border-radius: 10px;
 }
 .bocadillo:before {
   border: 25px solid white;
-  content: "";
+  content: '';
   border-left-color: transparent;
   border-bottom-color: transparent;
   border-right-color: transparent;
   position: absolute;
-  bottom: -44px;
-  left: 75px;
-  transform: rotate(8deg);
+  bottom: -48px;
+  left: calc(50% - 25px)
 }
 .textBocadillo {
   font-family: 'Indie Flower', sans-serif;
@@ -79,6 +76,8 @@ main {
   font-size: 20px;
   background-size: cover;
   background-color: white;
+  text-align: center;
+  padding: 10px;
 }
 .flecha {
   width: 18px;
@@ -89,6 +88,7 @@ main {
 }
 .containerBach {
     margin-top: 60px;
+    margin-left: 50px;
     
     
 }
