@@ -2,7 +2,8 @@ let operA;
 let operB;
 
 //Nodos
-
+const pixelBach$$ = "images/pixel-bach.png";
+const main$$ = document.querySelector("main");
 let result$$ = document.getElementById('result');
 const segm$$ = document.getElementById('segm');
 const segM$$ = document.getElementById('segM');
@@ -105,7 +106,7 @@ const resolve =  () => {
     p$$.innerHTML =  ``;
     if (tones === 5) {
         result$$.innerHTML = tones;
-        p$$.innerHTML = `Es una triada menor, tiene 5 tonos.`;
+        createBach();
     } else if (tones === 5.5) {
         result$$.innerHTML = tones;
         p$$.innerHTML = `Es una triada mayor, tiene 5 tonos y 1 semitono.`
@@ -121,4 +122,32 @@ const resolve =  () => {
     }
     div$$.appendChild(p$$);
     document.body.appendChild(div$$);
-}
+};
+
+function createBach() {
+    divBach$$ = document.createElement("div");
+    divBach$$.setAttribute("class", "containerBach");
+    divBocadillo$$ = document.createElement("div");
+    divBocadillo$$.setAttribute("class", "bocadillo");
+    divContainer$$ = document.createElement("div");
+    writeBocadillo(divBocadillo$$);
+  
+    /* divBocadillo$$.innerHTML = `
+    <p class="textBocadillo">Hola soy Bach.</p>
+    <img class="flecha" src="${flechaBocadillo$$}" alt="flecha">` */
+  
+    main$$.setAttribute("class", "centerMain");
+
+    divBach$$.innerHTML = `
+    <img class="rotateIn" src="${pixelBach$$}" alt="pixel-bach">`;
+    divContainer$$.appendChild(divBocadillo$$);
+    divContainer$$.appendChild(divBach$$);
+    main$$.appendChild(divContainer$$);
+  }
+  function writeBocadillo(param) {
+    
+      setTimeout(function () {
+        param.innerHTML = `
+      <p class="textBocadillo">Es una triada menor, tiene 5 tonos.</p>`;
+      }, 1000);    
+  }

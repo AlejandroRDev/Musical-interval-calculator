@@ -36,6 +36,7 @@ a {
 }
 li {
   background-color: #212529;
+ 
   
 }
 main {
@@ -53,8 +54,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin-left: 200px;
+  align-items: center;
 }
 
 .btn-start {
@@ -78,6 +78,7 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  margin-right: 70px;
 }
 .bocadillo:before {
   border: 25px solid white;
@@ -115,9 +116,10 @@ main {
    padding: 5px;
 
 }
+
 .containerBach {
     margin-top: 60px;
-    margin-left: 50px;
+    margin-right: 70px;
     
     
 }

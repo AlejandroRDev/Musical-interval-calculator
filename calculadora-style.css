@@ -3,7 +3,12 @@
     padding: 0;
     background-color: #F8F9FA;
 }
-
+.calculadora_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #navlist {
     display: flex;
     flex-direction: row;
@@ -27,6 +32,10 @@
   background-color: #212529;
     
 }
+.texto {
+  font-size: 20px;
+  padding: 40px;
+}
 
 a { 
     background-color: #212529;
@@ -44,6 +53,7 @@ main {
     max-width: 100%;
     height: 600px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -61,6 +71,99 @@ button {
 }
 
 #calculadora {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border:  2px solid #212529;
   background-color: #ADB5BD;
+  text-align: center;
+}
+
+.bocadillo {
+  margin: 20px;
+  position: relative;
+  height: 150px;
+  width: 300px;
+  background: white;
+  box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.bocadillo:before {
+  border: 25px solid white;
+  content: '';
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  bottom: -48px;
+  left: calc(50% - 25px)
+}
+.textBocadillo {
+  font-family: 'Indie Flower', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background-size: cover;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.containerBach {
+  margin-top: 60px;
+  margin-left: 50px;
+  
+  
+}
+
+/* ROTATE BACH */
+.rotateIn {
+box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+-webkit-animation-name: rotateIn;
+animation-name: rotateIn;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+background-color: #212529;
+}
+@-webkit-keyframes rotateIn {
+0% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate3d(0, 0, 1, -200deg);
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+}
+100% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
+}
+@keyframes rotateIn {
+0% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: rotate3d(0, 0, 1, -200deg);
+  transform: rotate3d(0, 0, 1, -200deg);
+  opacity: 0;
+}
+100% {
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transform: none;
+  transform: none;
+  opacity: 1;
+}
 }

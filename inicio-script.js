@@ -157,7 +157,6 @@ const writeBocadilloFourth = () => {
       divBocadillo$$.innerHTML = `
       <p class="textBocadillo">${bocadilloArray4[3]}</p>
       `;
-      divBocadillo$$.appendChild(btnBocadillo2);
     }, 10500);
     clearTimeout(divBocadillo$$);
   }
