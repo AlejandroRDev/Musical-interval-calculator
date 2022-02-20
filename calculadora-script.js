@@ -89,6 +89,7 @@ sum$$.onclick = () => {
 }
 reset$$.onclick = () => {
     result$$.innerHTML = ``;
+    divContainer$$.innerHTML = ``;
 }
 chord$$.onclick = () =>{
     operB = result$$.textContent;
